@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: hsl(30, 38%, 92%);
+    --primary-color: hsl(158, 36%, 37%);
+    --title-color: hsl(212, 21%, 14%);
+    --text-color: hsl(228, 12%, 48%);
+    --hover-color: hsl(158, 36%, 19%);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+html {
+    background-color: var(--background-color);
+    font-family: 'Monterrat', sans-serif;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.card .image-container img {
+    border-radius: 10px 0 0 10px;
+}
+
+.card .main-content {
+    margin-top: 25px;
+    padding-right: 20px;
+    color: var(--text-color);
+}
+
+h1,
+h2 {
+    font-family: 'Fraunces', sans-serif;
+}
+
+h5 {
+    font-weight: 500;
+}
+
+.card .main-content h1 {
+    font-weight: 700;
+    line-height: 1;
+    padding: 10px 0 20px;
+    color: var(--title-color);
+}
+
+.card .main-content h2 {
+    padding: 20px 0 20px;
+}
+
+.card .main-content h2 span {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: var(--text-color);
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.card .main-content button {
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 12px;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card .main-content button img {
+    margin-right: 10px;
+}
+
+.card .main-content button:hover {
+    background-color: var(--hover-color);
+}
+
+#text-green {
+    color: var(--primary-color);
+}
+
+@media (max-width: 430px) {
+    html {
+        padding: 20px;
+        display: block;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+
+    .image-container img {
+        object-fit: cover;
+        width: 100%;
+        height: 45vh;
+        border-radius: 10px !important;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+}
